@@ -4,16 +4,20 @@ $font-main: "Montserrat", sans-serif;
 $white: #ffffff;
 $black: #000000;
 
-$primary: #60E1CB;
-
-
-$gray: #292525;
-$secondary: #7BC0E3;
-$mint: #E9FBF8;
+$gray: #161719;
+$gray-1: #8C8C8C;
+$gray-2: #3C4147;
+$gray-3: #E0E0E0;
+$blue: #003166;
+$blue-1: #007AFF;
+$gradient: linear-gradient(90deg, rgba(0,122,255,1) 0%, rgba(0,49,102,1) 100%);
+$purple: #6856C9;
+$orange: #F24423;
 
 
 // Breakpoints
-$breakpoint-sm: 768px;
+$breakpoint-xs: 768px;
+$breakpoint-sm: 992px;
 $breakpoint-md: 1024px;
 $breakpoint-lg: 1200px;
 $breakpoint-xl: 1600px;

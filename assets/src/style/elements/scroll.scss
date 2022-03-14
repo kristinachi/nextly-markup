@@ -9,12 +9,12 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background: $primary;
+      background: $gradient;
       border-radius: 4px;
     }
 
     &::-webkit-scrollbar-thumb:hover {
-      background: $primary;
+      background: $gradient;
     }
   }
 }
