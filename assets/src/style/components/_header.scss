@@ -1,160 +1,163 @@
-// .header {
-//   background-color: $white;
-//   box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
-//   position: relative;
-//   z-index: 2;
+.header {
+  background: $gradient;
+  position: relative;
+  z-index: 2;
+  padding: 20px 0;
 
-//   &__img {
-//     width: 120px;
+  @media (min-width: $breakpoint-xs) {
+  }
 
-//     @media (min-width: $breakpoint-md) {
-//       width: 195px;
-//     }
-//   }
+  &__img {
+    display: none;
 
-//   .container {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     min-height: 70px;
+    @media (min-width: $breakpoint-xs) {
+      display: block;
+      width: 132px;
+    }
+  }
 
-//     @media (min-width: $breakpoint-sm) {
-//       min-height: 110px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
-//     }
-//   }
-// }
+    @media (min-width: $breakpoint-xs) {
+      justify-content: space-between;
+    }
+  }
+}
 
-// .header-menu {
-//   @media (min-width: $breakpoint-lg) {
-//     padding: 0 0 0 15px;
-//   }
+.header-menu {
+  &-opener {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 18px;
 
-//   &-opener {
-//     display: inline-block;
-//     position: relative;
-//     width: 30px;
-//     height: 18px;
+    @media (min-width: $breakpoint-xs) {
+      display: none;
+    }
 
-//     @media (min-width: $breakpoint-md) {
-//       display: none;
-//     }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      left: 0;
+    }
 
-//     &:before,
-//     &:after {
-//       content: '';
-//       position: absolute;
-//       width: 100%;
-//       height: 2px;
-//       background-color: $gray;
-//       border-radius: 2px;
-//       left: 0;
-//     }
+    &:before {
+      top: 0;
+    }
 
-//     &:before {
-//       top: 0;
-//     }
+    &:after {
+      bottom: 0;
+    }
 
-//     &:after {
-//       bottom: 0;
-//     }
+    &.active {
+      &:before {
+        top: 50%;
+        transform: rotate(45deg) translateY(-50%);
+      }
 
-//     &.active {
-//       &:before {
-//         top: 50%;
-//         transform: rotate(45deg) translateY(-50%);
-//       }
+      &:after {
+        bottom: 50%;
+        transform: rotate(-45deg) translateY(50%);
+      }
 
-//       &:after {
-//         bottom: 50%;
-//         transform: rotate(-45deg) translateY(50%);
-//       }
+      span {
+        opacity: 0;
+      }
+    }
 
-//       span {
-//         opacity: 0;
-//       }
-//     }
+    span {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+    }
+  }
 
-//     span {
-//       position: absolute;
-//       top: 50%;
-//       left: 0;
-//       transform: translateY(-50%);
-//       width: 100%;
-//       height: 2px;
-//       background-color: $gray;
-//       border-radius: 2px;
-//     }
-//   }
-// }
+  &__logo {
+    display: block;
+    width: 134px;
+    margin: 0 auto 60px;
+    @media (min-width: $breakpoint-xs) {
+      display: none;
+    }
+  }
+}
 
-// .header__pages {
+.header__pages {
+  @media (max-width: $breakpoint-xs - 1) {
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $gradient;
+    text-align: center;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  }
 
-//   @media (max-width: $breakpoint-md - 1) {
-//     padding: 15px;
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: $white;
-//     text-align: center;
-//     transform: translateX(-100%);
-//     transition: all 0.3s ease;
+  @media (min-width: $breakpoint-xs) {
+    display: flex;
+    align-items: center;
+    margin: 0 -30px;
+  }
 
-//   }
+  li {
+    padding: 0 5px;
+    margin-bottom: 15px;
 
-//   @media (min-width: $breakpoint-md) {
+    @media (min-width: $breakpoint-xs) {
+      margin-bottom: 0;
+      padding: 0 30px;
+    }
+  }
 
-//     display: flex;
-//     align-items: center;
-//     margin: 0 -19px;
+  a {
+    position: relative;
+    display: block;
+    line-height: 22px;
+    color: $white;
+    font-weight: 700;
+    font-size: 18px;
 
-//   }
+    @media (min-width: $breakpoint-xs) {
+      font-size: 14px;
+    }
 
-//   li {
-//     padding: 0 5px;
-//     margin-bottom: 15px;
+    &:hover {
+      color: $gray;
+    }
 
-//     @media (min-width: $breakpoint-md) {
-//       margin-bottom: 10px;
-//       padding: 0 19px;
+    // &.active {
+    //   color: $white;
+    // }
+  }
 
-//     }
-//   }
+  &-opener {
+    text-align: right;
 
-//   a {
-//     position: relative;
-//     display: block;
-//     line-height: 22px;
-//     color: $primary;
-//     font-weight: 700;
-//     font-size: 18px;
+    @media (min-width: $breakpoint-xs) {
+      display: none;
+    }
+  }
+}
 
-//     @media (min-width: $breakpoint-md) {
-//       font-size: 14px;
-//     }
-
-//     &:hover,
-//     &.active {
-//       color: $secondary;
-//     }
-//   }
-
-//   &-opener {
-//     text-align: right;
-
-//     @media (min-width: $breakpoint-md) {
-//       display: none;
-//     }
-//   }
-// }
-
-// body {
-//   &.menu-open {
-//     .header__pages {
-//       transform: translateX(0);
-//       transition: all 0.3s ease;
-//     }
-//   }
-// }
+body {
+  &.menu-open {
+    .header__pages {
+      transform: translateX(0);
+      transition: all 0.3s ease;
+    }
+  }
+}

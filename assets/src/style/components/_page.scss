@@ -1,536 +1,470 @@
-// .hero-section {
-//   padding: 40px 0;
-//   height: calc(100vh - 70px);
-//   background: url("../img/circle.svg"), url("../img/circle.svg");
-//   background-size: 200px, 200px;
-//   background-repeat: no-repeat, no-repeat;
-//   background-position: top left, 130% 110%;
-//   display: flex;
-//   align-items: center;
-
-//   @media (min-width: $breakpoint-md) {
-//     display: block;
-//     background: url("../img/boyandgirl.png"), url("../img/circle.svg");
-//     background-size: contain, 500px;
-//     background-repeat: no-repeat, no-repeat;
-//     background-position: center right, left 200%;
-//     min-height: 740px;
-//     padding-top: 250px;
-//   }
-// }
-
-// .hero-text {
-//   max-width: 670px;
-
-//   @media (min-width: $breakpoint-sm) {
-//     line-height: 30px;
-//   }
-// }
-
-// .hero-title-group {
-//   text-align: left;
-
-//   .h1 {
-//     max-width: 500px;
-//     position: relative;
-//     margin-bottom: 30px;
-
-//     span {
-//       color: $primary;
-//     }
-
-//     &::before {
-//       content: "";
-//       position: absolute;
-//       background-color: $secondary;
-//       width: 120px;
-//       height: 4px;
-//       left: 0;
-//       top: -22px;
-//     }
-//   }
-// }
-
-// .hero-btn-box {
-//   display: flex;
-//   margin: 0 -7px;
-
-//   >div {
-//     padding: 0 7px;
-//   }
-// }
-
-// .services-section {
-//   padding: 50px 0 40px;
-//   background-color: $mint;
-
-//   @media (min-width: $breakpoint-sm) {
-//     padding: 118px 0 144px;
-//     background-image: url("../img/circle.svg");
-//     background-size: 500px;
-//     background-repeat: no-repeat;
-//     background-position: right bottom;
-//   }
-
-//   .title-group {
-//     margin-left: auto;
-//     margin-right: auto;
-//     max-width: 750px;
-//   }
-// }
-
-// .greatwork-section {
-//   padding-top: 35px;
-
-//   @media (min-width: $breakpoint-sm) {
-//     padding-top: 77px;
-//   }
-
-//   .accent-bg {
-//     background-color: $primary;
-//     min-height: 270px;
-
-//     @media (min-width: $breakpoint-sm) {
-//       min-height: 370px;
-//     }
-//   }
-
-//   .tabs-content {
-//     margin-bottom: -207px;
-//   }
-// }
-
-// .idea-section {
-//   padding: 50px 0;
-//   background: url("../img/circle.svg"), url("../img/circle.svg");
-//   background-size: 150px, 250px;
-//   background-repeat: no-repeat, no-repeat;
-//   background-position: right -2%, -145px bottom;
-
-//   @media (min-width: $breakpoint-sm) {
-//     padding: 150px 0 100px;
-//     background: url("../img/boywithpc.png"), url("../img/circle.svg"),
-//       url("../img/circle.svg"), url("../img/circle.svg");
-//     background-size: 800px, 300px, 300px, 400px;
-//     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-//     background-position: bottom right, top left, top right, bottom left;
-//   }
-// }
-
-// .idea-title-group {
-//   max-width: 800px;
-//   text-align: left;
-//   line-height: 24px;
-
-//   @media (min-width: $breakpoint-sm) {
-//     line-height: 33px;
-//   }
-
-//   >h1 {
-//     min-width: 600px;
-//   }
-
-//   span {
-//     color: $primary;
-//   }
-// }
-
-// .idea-list {
-//   max-width: 650px;
-//   counter-reset: list;
-
-//   li {
-//     display: flex;
-//     margin-bottom: 10px;
-
-//     @media (min-width: $breakpoint-sm) {
-//       margin-bottom: 50px;
-//     }
-
-//     &:before {
-//       content: counter(list);
-//       counter-increment: list;
-//       flex-shrink: 0;
-//       height: 40px;
-//       width: 40px;
-//       background-color: $white;
-//       box-shadow: 0px 32px 41px rgba(0, 0, 0, 0.13);
-//       border-radius: 50%;
-//       font-size: 18px;
-//       color: $secondary;
-//       font-weight: 900;
-//       text-align: center;
-//       line-height: 40px;
-
-//       @media (min-width: $breakpoint-sm) {
-//         height: 80px;
-//         width: 80px;
-//         font-size: 32px;
-//         line-height: 80px;
-//       }
-//     }
-
-//     &:last-child {
-//       margin-bottom: 0;
-//     }
-//   }
-
-//   &__text {
-//     font-weight: 500;
-//     font-size: 14px;
-//     padding-left: 20px;
-//     padding-top: 10px;
-//     line-height: 22px;
-
-//     @media (min-width: $breakpoint-sm) {
-//       font-weight: 500;
-//       font-size: 16px;
-//       padding-left: 50px;
-//       padding-top: 28px;
-//       line-height: 25px;
-//     }
-//   }
-
-//   &__title {
-//     margin-bottom: 10px;
-//     font-size: 20px;
-//     font-weight: 700;
-//     color: $primary;
-
-//     @media (min-width: $breakpoint-sm) {
-//       margin-bottom: 10px;
-//       font-size: 24px;
-//       font-weight: 700;
-//       color: $primary;
-//     }
-//   }
-// }
-
-// .work-slider {
-//   margin: 0 -15px;
-
-//   .slick-prev {
-//     left: -17px;
-//   }
-
-//   .slick-next {
-//     right: -17px;
-//   }
-// }
-
-// .work-slide {
-//   padding: 0 15px;
-
-//   &__img {
-//     border-radius: 16px;
-//     margin-bottom: 30px;
-//   }
-
-//   &__text {
-//     font-size: 16px;
-//     line-height: 22px;
-
-//     @media (min-width: $breakpoint-sm) {
-//       font-size: 18px;
-//       line-height: 25px;
-//     }
-//   }
-// }
-
-// .testimonials-slider {
-//   .slick-prev {
-//     left: 0;
-//   }
-
-//   .slick-next {
-//     right: 0;
-//   }
-// }
-
-// .testimonials-slide {
-//   padding-bottom: 20px;
-
-//   @media (min-width: $breakpoint-sm) {
-//     padding-bottom: 50px;
-//   }
-// }
-
-// .testimonials-card {
-//   margin: 0 auto;
-//   max-width: 1024px;
-//   background-color: #fdfdff;
-//   box-shadow: 0px 10px 10px rgba(7, 0, 59, 0.12);
-//   border-radius: 12px;
-//   padding: 20px;
-//   text-align: center;
-
-//   @media (min-width: $breakpoint-sm) {
-//     padding: 68px;
-//     box-shadow: 0px 20px 40px rgba(7, 0, 59, 0.12);
-//   }
-
-//   &__number {
-//     font-size: 24px;
-//     line-height: 24px;
-//     font-weight: 900;
-//     letter-spacing: 0.6px;
-//     margin-bottom: 10px;
-
-//     @media (min-width: $breakpoint-sm) {
-//       font-size: 32px;
-//       line-height: 40px;
-//     }
-//   }
-
-//   &__text {
-//     font-weight: 500;
-//     font-size: 18px;
-//     line-height: 26px;
-//     margin-top: 18px;
-
-//     @media (min-width: $breakpoint-sm) {
-//       font-size: 22px;
-//       line-height: 40px;
-//       margin-top: 30px;
-//     }
-//   }
-
-//   .star {
-//     position: relative;
-//     display: inline-block;
-//     width: 0;
-//     height: 0;
-//     margin-left: 0.9em;
-//     margin-right: 0.9em;
-//     margin-bottom: 1.2em;
-
-//     border-right: 0.3em solid transparent;
-//     border-bottom: 0.7em solid #fc0;
-//     border-left: 0.3em solid transparent;
-
-//     font-size: 10px;
-
-//     @media (min-width: $breakpoint-sm) {
-//       font-size: 14px;
-//     }
-
-//     &:before,
-//     &:after {
-//       content: "";
-
-//       display: block;
-//       width: 0;
-//       height: 0;
-
-//       position: absolute;
-//       top: 0.6em;
-//       left: -1em;
-
-//       border-right: 1em solid transparent;
-//       border-bottom: 0.7em solid #fc0;
-//       border-left: 1em solid transparent;
-
-//       transform: rotate(-35deg);
-//     }
-
-//     &:after {
-//       transform: rotate(35deg);
-//     }
-//   }
-// }
-
-// .testimonials-nav {
-//   max-width: 640px;
-//   margin: 0 auto;
-
-//   .slick-list {
-//     padding: 0 !important;
-//   }
-
-//   .slick-current {
-//     .testimonials-nav-card {
-//       &__img {
-//         height: 80px;
-//         width: 80px;
-//         opacity: 1;
-
-//         @media (min-width: $breakpoint-sm) {
-//           height: 110px;
-//           width: 110px;
-//         }
-//       }
-
-//       &__name,
-//       &__caption {
-//         opacity: 1;
-//       }
-//     }
-//   }
-// }
-
-// .testimonials-nav-card {
-//   &__img {
-//     border-radius: 50%;
-//     background-color: #3e4056;
-//     overflow: hidden;
-//     margin: 0 auto 16px;
-//     width: 50px;
-//     height: 50px;
-//     opacity: 0.3;
-
-//     @media (min-width: $breakpoint-sm) {
-//       width: 86px;
-//       height: 86px;
-//       margin: 0 auto 30px;
-//     }
-//   }
-
-//   &__name {
-//     font-size: 16px;
-//     line-height: 20px;
-//     font-weight: 700;
-//     text-align: center;
-//     margin-bottom: 5px;
-//     opacity: 0;
-
-//     @media (min-width: $breakpoint-sm) {
-//       font-size: 18px;
-//       line-height: 22px;
-//       margin-bottom: 10px;
-//     }
-//   }
-
-//   &__caption {
-//     text-align: center;
-//     font-weight: 450;
-//     font-size: 14px;
-//     line-height: 16px;
-//     letter-spacing: 0.2px;
-//     color: $primary;
-//     opacity: 0;
-
-//     @media (min-width: $breakpoint-sm) {
-//       font-size: 14px;
-//       line-height: 18px;
-//     }
-//   }
-// }
-
-// .clients-section {
-//   min-height: 650px;
-//   padding: 70px 0 70px;
-
-//   @media (min-width: $breakpoint-sm) {
-//     min-height: 1100px;
-//     padding: 175px 0 145px;
-//     background: url("../img/circle.svg"), url("../img/circle.svg");
-//     background-size: 300px, 200px;
-//     background-repeat: no-repeat, no-repeat;
-//     background-position: center left, bottom right;
-//   }
-
-//   .container {
-//     max-width: 1450px;
-//   }
-// }
-
-// .news-section {
-//   background-color: $mint;
-//   min-height: 480px;
-//   padding: 40px 0 25px;
-
-//   @media (min-width: $breakpoint-sm) {
-//     min-height: 680px;
-//     padding: 150px 0 100px;
-//     background-image: url("../img/circle.svg"), url("../img/circle.svg");
-//     background-size: 300px, 200px;
-//     background-repeat: no-repeat, no-repeat;
-//     background-position: left 165%, right bottom;
-//   }
-
-//   .title-group {
-//     &__subtitle {
-//       max-width: 540px;
-//       margin-bottom: 45px;
-//     }
-
-//     &__overhead {
-//       margin-bottom: 12px;
-//     }
-//   }
-// }
-
-// .news-slider {
-//   @media (min-width: $breakpoint-sm) {
-//     margin: 0 -15px;
-//   }
-
-//   .slick-prev {
-//     visibility: hidden;
-//   }
-
-//   .slick-next {
-//     background-color: $primary;
-//     color: $white;
-//     right: calc(20% - 18px);
-
-//     @media (min-width: $breakpoint-sm) {
-//       right: calc(20% - 32px);
-//     }
-//   }
-
-//   .slick-list {
-//     padding-right: 20%;
-//     margin-bottom: 25px;
-
-//     @media (min-width: $breakpoint-sm) {
-//       margin-bottom: 70px;
-//     }
-//   }
-
-//   .slick-dots {
-//     display: flex;
-//     margin: 0 8px;
-
-//     li {
-//       padding: 0 8px;
-
-//       &.slick-active {
-//         button {
-//           background-color: $primary;
-//           height: 12px;
-//           width: 12px;
-
-//           @media (min-width: $breakpoint-sm) {
-//             height: 16px;
-//             width: 16px;
-//           }
-//         }
-//       }
-//     }
-
-//     button {
-//       font-size: 0;
-//       height: 8px;
-//       width: 8px;
-//       display: inline-block;
-//       border-radius: 50%;
-//       background-color: #cbcdf5;
-
-//       @media (min-width: $breakpoint-sm) {
-//         height: 10px;
-//         width: 10px;
-//       }
-//     }
-//   }
-// }
-
-// .news-slide {
-//   padding: 0 15px;
-// }
-
-// .news-box {
-//   max-width: 570px;
-//   padding: 0 15px;
-//   margin: 0 auto;
-// }
+.hero-section {
+  background: $gradient;
+  padding: 46px 0 42px;
+
+  @media (min-width: $breakpoint-xs) {
+    padding: 140px 0 176px;
+  }
+}
+
+.hero {
+  color: $white;
+
+  @media (min-width: $breakpoint-xs) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__img {
+    @media (min-width: $breakpoint-xs) {
+      width: 440px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__box {
+    @media (min-width: $breakpoint-xs) {
+      max-width: 532px;
+    }
+  }
+
+  &__btn {
+    display: none;
+
+    @media (min-width: $breakpoint-xs) {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-size: 46px;
+    line-height: 62px;
+    margin-bottom: 20px;
+
+    @media (min-width: $breakpoint-xs) {
+      margin-bottom: 6px;
+    }
+
+    span {
+      font-weight: 900;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 50px;
+  }
+}
+
+.text-section {
+  padding: 160px 0;
+  background: url("../img/section-2.png");
+  background-size: 258px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $breakpoint-xs) {
+    padding: 200px 0;
+  }
+}
+
+.text {
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: center;
+
+  @media (min-width: $breakpoint-xs) {
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 714px;
+  }
+}
+
+.message-section {
+  background: $gradient;
+  padding: 58px 0;
+
+  @media (min-width: $breakpoint-xs) {
+    padding: 50px 0;
+  }
+}
+
+.message {
+  color: $white;
+  max-width: 260px;
+
+  @media (min-width: $breakpoint-xs) {
+    max-width: 570px;
+  }
+
+  a {
+    color: $white;
+    font-size: 18px;
+    line-height: 24px;
+
+    &:hover {
+      color: $gray;
+    }
+  }
+}
+
+.background {
+  background-color: $purple;
+
+  &.background--orange {
+    background-color: $orange;
+  }
+
+  &.background--gray {
+    background-color: $gray-2;
+  }
+}
+
+.company-section {
+  padding: 80px 0 50px;
+
+  @media (min-width: $breakpoint-xs) {
+    padding: 126px 0;
+  }
+}
+
+.company {
+  color: $white;
+
+  @media (min-width: $breakpoint-xs) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__box {
+    margin-bottom: 50px;
+
+    @media (min-width: $breakpoint-xs) {
+      max-width: 434px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__logo {
+    margin: 0 auto 54px;
+    width: 256px;
+
+    @media (min-width: $breakpoint-xs) {
+      width: 434px;
+      margin-bottom: 44px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -3px 50px;
+
+    @media (min-width: $breakpoint-xs) {
+      margin: 0 -6px 25px;
+      justify-content: flex-start;
+    }
+
+    li {
+      padding: 0 3px;
+
+      @media (min-width: $breakpoint-xs) {
+        padding: 0 6px;
+      }
+    }
+
+    a {
+      color: $white;
+      font-size: 12px;
+      line-height: 14px;
+      border: 1px solid $white;
+      padding: 4px 12px;
+      border-radius: 50px;
+
+      @media (min-width: $breakpoint-xs) {
+        padding: 6px 16px;
+      }
+
+      &:hover {
+        color: $gray;
+        border-color: $gray;
+      }
+    }
+  }
+
+  &__img {
+    @media (min-width: $breakpoint-xs) {
+      width: 642px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__descola {
+    width: 142px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    @media (min-width: $breakpoint-xs) {
+      margin: 0;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 26px;
+
+    @media (min-width: $breakpoint-xs) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    a {
+      color: $white;
+      font-weight: 700;
+
+      &:hover {
+        color: $gray;
+      }
+    }
+  }
+}
+
+.review-section {
+  padding: 96px 0;
+}
+
+.review {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-xs) {
+    max-width: 714px;
+  }
+
+  &__img {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 50px;
+
+    @media (min-width: $breakpoint-xs) {
+      height: 80px;
+      width: 80px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+
+    @media (min-width: $breakpoint-xs) {
+      font-size: 25px;
+      line-height: 38px;
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: $gray-1;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media (min-width: $breakpoint-xs) {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.languages-section {
+  padding: 60px 0 50px;
+
+  @media (min-width: $breakpoint-xs) {
+    padding: 100px 0 90px;
+  }
+}
+
+.language {
+  text-align: center;
+
+  @media (min-width: $breakpoint-xs) {
+    max-width: 840px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 36px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 46px;
+    margin-bottom: 60px;
+
+    @media (min-width: $breakpoint-xs) {
+      font-size: 24px;
+      margin-bottom: 88px;
+    }
+  }
+
+  &__card {
+    @media (min-width: $breakpoint-xs) {
+      padding: 10px;
+    }
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+
+    @media (min-width: $breakpoint-xs) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .row {
+    width: 192px;
+    margin: 0 auto;
+    @media (min-width: $breakpoint-xs) {
+      width: 100%;
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  color: $gray-4;
+  font-size: 14px;
+  line-height: 36px;
+  border-radius: 10px;
+  padding: 2px 20px;
+
+  input {
+    width: 100%;
+  }
+}
+
+.textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  color: $gray-4;
+  font-size: 14px;
+  line-height: 36px;
+  border-radius: 10px;
+  padding: 2px 20px;
+
+  textarea {
+    border: 0;
+    resize: none;
+    height: 120px;
+    width: 100%;
+
+    &:focus-visible {
+      outline: 0;
+    }
+  }
+}
+
+.connect-section {
+  background: $gradient-2;
+  padding: 70px 0 50px;
+  text-align: center;
+
+  @media (min-width: $breakpoint-xs) {
+    padding: 174px 0;
+    text-align: left;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+}
+
+.connect {
+  @media (min-width: $breakpoint-xs) {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 50px;
+    color: $white;
+
+    @media (min-width: $breakpoint-xs) {
+      margin-bottom: 44px;
+    }
+  }
+
+  &__text {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 40px;
+    color: $white;
+  }
+
+  &__mail {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 40px;
+
+    a {
+      color: $white;
+    }
+  }
+
+  &__form {
+    margin-bottom: 40px;
+    @media (min-width: $breakpoint-xs) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item3 {
+    @media (min-width: $breakpoint-xs) {
+      grid-area: 1/2/4/2;
+    }
+  }
+
+  &__item2 {
+    @media (min-width: $breakpoint-xs) {
+      display: none;
+    }
+  }
+}
