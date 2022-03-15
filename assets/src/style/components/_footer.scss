@@ -1,117 +1,115 @@
-// .footer-section {
-//   padding: 20px 0;
-//   background: url(../img/main-bg.png) no-repeat;
-//   background-position: center;
-//   background-size: cover;
+.footer-section {
+  background-color: $black;
+}
 
-//   @media (min-width: $breakpoint-sm) {
-//     padding: 110px 0;
-//   }
-// }
+.footer {
+  color: $white;
+  margin: 0 auto;
+  padding: 40px 0 30px;
 
-// .footer-top {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-between;
-//   margin: 0 -15px;
-//   margin-bottom: 50px;
+  @media (min-width: $breakpoint-xs) {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
 
-//   @media (min-width: $breakpoint-sm) {
-//     flex-wrap: nowrap;
-//   }
+  &__item1 {
+    @media (min-width: $breakpoint-xs) {
+      order: 1;
+      align-self: center;
+    }
+  }
 
-//   > div {
-//     padding: 0 15px;
-//     margin-bottom: 10px;
-//   }
+  &__img {
+    width: 124px;
+    margin: 0 auto 60px;
 
-// }
+    @media (min-width: $breakpoint-xs) {
+      margin: 0 auto;
+    }
 
-// .footer-col {
-//   width: 50%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
 
-//   @media (min-width: $breakpoint-sm) {
-//     width: auto;
-//   }
-// }
+  .box {
+    max-width: 222px;
+    margin: 0 auto 60px;
+    text-align: center;
 
-// .footer-main {
-//   width: 100%;
+    @media (min-width: $breakpoint-xs) {
+      margin: 0;
+      text-align: left;
+    }
 
-//   @media (min-width: $breakpoint-sm) {
-//     width: 35%;
-//   }
+    &__social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 -10px;
 
-//   &__img {
-//     width: 195px;
-//   }
+      @media (min-width: $breakpoint-xs) {
+        justify-content: flex-start;
+      }
 
-//   &__text {
-//     font-size: 16px;
-//     line-height: 30px;
-//     color: $gray;
-//     font-weight: 600;
-//     margin-top: 30px;
-//   }
+      li {
+        padding: 0 10px;
+      }
 
-// }
+      img {
+        width: 38px;
+      }
+    }
 
-// .footer-nav {
+    &__contact {
+      margin: -2px 0;
 
-//   a {
-//     color: $gray;
-//     line-height: 30px;
-//     font-size: 16px;
-//     opacity: 0.4;
-//     font-weight: 500;
-//   }
+      li {
+        padding: 2px 0;
+      }
 
-//   a:hover {
-//     opacity: 1;
-//   }
-// }
+      a {
+        color: $white;
+        font-size: 16px;
+        line-height: 40px;
+      }
+    }
+  }
 
+  .title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 16px;
+    text-align: center;
 
-// .footer-bottom {
-//   display: flex;
-//   justify-content: space-between;
-//   border-top: 1px solid $white;
-//   padding-top: 25px;
+    @media (min-width: $breakpoint-xs) {
+      text-align: left;
+    }
+  }
 
-//   @media (min-width: $breakpoint-sm) {
-//     padding-top: 50px;
-//   }
-// }
+  .text {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
 
-// .footer-author {
-//   font-size: 16px;
-//   line-height: 20px;
-//   color: $gray;
-//   font-weight: 450;
-// }
+    @media (min-width: $breakpoint-xs) {
+      text-align: left;
+    }
+  }
+}
 
-// .footer-social {
-//   display: flex;
-//   margin: 0 -8px;
+.footer-copy {
+  background-color: $gray;
+  padding: 20px 0;
+  color: $gray-3;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
 
-//   @media (min-width: $breakpoint-sm) {
-//     margin: 0 -15px;
-//   }
-
-//   li {
-//     padding: 0 8px;
-
-//     @media (min-width: $breakpoint-sm) {
-//       padding: 0 15px;
-//     }
-//   }
-
-//   a {
-//     font-size: 20px;
-//     color: $gray;
-//   }
-
-//   a:hover {
-//     color: $white;
-//   }
-// }
+  @media (min-width: $breakpoint-xs) {
+    padding: 30px 0;
+  }
+}

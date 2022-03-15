@@ -1,73 +1,86 @@
-// .btn {
-//   display: inline-block;
-//   min-width: 140px;
-//   border-radius: 80px;
-//   color: $white;
-//   text-align: center;
-//   font-size: 14px;
-//   line-height: 26px;
-//   font-weight: 700;
-//   padding: 5px 14px;
-//   transition: all 0.3s ease;
-//   border: 2px solid;
+.btn {
+  display: inline-block;
+  min-width: 100px;
+  border-radius: 50px;
+  color: $white;
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  padding: 12px 41px;
+  transition: all 0.3s ease;
+  border: 2px solid;
 
-//   &:hover {
-//     transition: all 0.3s ease;
-//   }
+  &:hover {
+    transition: all 0.3s ease;
+  }
 
-//   &.btn-md {
-//     min-width: 188px;
-//     font-size: 20px;
-//     line-height: 42px;
-//   }
+  &.primary-btn {
+    background-color: $white;
+    border-color: $white;
+    color: $blue;
 
-//   &.primary-btn {
-//     background-color: $primary;
-//     border-color: $primary;
+    &:hover {
+      background-color: transparent;
+      color: $white;
+    }
 
-//     &:hover {
-//       background-color: transparent;
-//       color: $primary;
-//     }
+    &.outline-btn {
+      background-color: transparent;
+      color: $white;
 
-//     &.outline-btn {
-//       background-color: transparent;
-//       color: $primary;
+      &:hover {
+        background-color: $white;
+        color: $blue;
+      }
+    }
+  }
 
-//       &:hover {
-//         background-color: $primary;
-//         color: $white;
-//       }
-//     }
-//   }
+  &.secondary-btn {
+    background: $gradient;
+    color: $white;
+    border-color: $blue-1;
 
-//   &.secondary-btn {
-//     background-color: $secondary;
-//     border-color: $secondary;
+    &:hover {
+      background: transparent;
+      color: $white;
+    }
 
-//     &:hover {
-//       background-color: transparent;
-//       color: $secondary;
-//     }
+    &.outline-btn {
+      background: transparent;
+      border-color: $blue-1;
+      color: $white;
+      width: 100%;
 
-//     &.outline-btn {
-//       background-color: transparent;
-//       color: $secondary;
+      &:hover {
+        background: $gradient;
+        color: $white;
+      }
+    }
+  }
 
-//       &:hover {
-//         background-color: $secondary;
-//         color: $white;
-//       }
-//     }
-//   }
+  &.gradient-btn {
+    background: $gradient;
+    padding: 8px 12px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    border-image-slice: 1;
+    
 
-//   &.dark-btn {
-//     background-color: $gray;
-//     border-color: $gray;
+    &:hover {
+      background: $gradient-1;
 
-//     &:hover {
-//       background-color: transparent;
-//       color: $gray;
-//     }
-//   }
-// }
+    }
+  }
+
+  &.d-flex {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 22px;
+      padding-right: 6px;
+    }
+  }
+}

@@ -13,8 +13,8 @@ html {
   overflow: hidden;
   height: 100%;
   display: grid;
-  grid-template-rows: auto  minmax(0, 1fr);
-  }
+  grid-template-rows: auto minmax(0, 1fr);
+}
 
 main {
   overflow-y: auto;
@@ -23,12 +23,12 @@ main {
   z-index: 1;
 }
 
-
 body {
   min-width: 320px;
   font-family: $font-main;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 20px;
   color: $gray;
 }
 
@@ -98,37 +98,30 @@ textarea {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-
-  @media (min-width: $breakpoint-lg) {
-    max-width: 1200px;
-  }
+  max-width: 1080px;
 }
 
 .row {
-
-  @media (min-width: $breakpoint-sm) {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
-  }
 }
 
 [class^="col-"] {
   margin-bottom: 15px;
+  padding: 0 15px;
 
-  @media (min-width: $breakpoint-sm) {
+  @media (min-width: $breakpoint-xs) {
     margin-bottom: 30px;
-    padding: 0 15px;
-
   }
 }
 
 .col-3 {
-  @media (min-width: $breakpoint-sm)  {
+  @media (min-width: $breakpoint-xs) {
     width: 33.33%;
   }
 
-  @media (min-width: $breakpoint-md)  {
+  @media (min-width: $breakpoint-sm) {
     width: 25%;
   }
 }
@@ -136,21 +129,28 @@ textarea {
 .col-4 {
   width: 100%;
 
-  @media (min-width: $breakpoint-sm)  {
+  @media (min-width: $breakpoint-xs) {
     width: 50%;
   }
 
-  @media (min-width: $breakpoint-md)  {
+  @media (min-width: $breakpoint-sm) {
     width: calc(100% / 3);
   }
-  
 }
 
 .col-6 {
   width: 100%;
 
-  @media (min-width: $breakpoint-sm) {
+  @media (min-width: $breakpoint-xs) {
     width: 50%;
+  }
+}
+
+.col-2 {
+  width: 50%;
+
+  @media (min-width: $breakpoint-xs) {
+    width: calc(100% / 5);
   }
 }
 
@@ -163,6 +163,3 @@ svg {
 .d-flex {
   display: flex;
 }
-
-
-
